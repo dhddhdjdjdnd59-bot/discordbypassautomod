@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Client-side Discord Automod text transformer supporting invisible separators, homoglyphs, leetspeak, ROT13, reverse text, and Base64 encoding.">
+    <meta property="og:title" content="Discord Automod Bypasser">
+    <meta property="og:description" content="Transform text using Unicode separators, Cyrillic lookalikes, leetspeak, ROT13, reverse text, and Base64.">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230d6efd'/%3E%3Ctext x='16' y='21' text-anchor='middle' font-family='sans-serif' font-weight='700' font-size='14' fill='white'%3EAB%3C/text%3E%3C/svg%3E">
+
+    <title>Discord Automod Bypasser</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="content-wrapper">
+        <div class="bypasser-container">
+            <h1>DISCORD AUTOMOD BYPASSER</h1>
+
+            <textarea
+                id="inputBox"
+                class="io-box"
+                aria-label="Input text"
+                placeholder="Type or paste your text here..."
+            ></textarea>
+
+            <select id="bypassSelect" class="select-box" aria-label="Transformation method">
+                <option value="invisible">Universal (basic)</option>
+                <option value="combo">Undetectable</option>
+                <option value="unicode">Unicode Leetspeak</option>
+                <option value="cyrillic">Cyrillic Letters</option>
+                <option value="emoji">Emoji Separator</option>
+                <option value="dot">Dot Separator</option>
+                <option value="strikethrough">Combining Characters</option>
+                <option value="rot13">ROT13 Obfuscation</option>
+                <option value="reverse">Reverse Text</option>
+                <option value="base64">Base64 Encode</option>
+            </select>
+
+            <div id="outputText" aria-live="polite"></div>
+
+            <button id="copyButton" class="btn" type="button">
+                <span>Copy Result</span>
+            </button>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        &copy; <span id="current-year"></span> Discord Automod Bypasser
+    </footer>
+</body>
+</html>
